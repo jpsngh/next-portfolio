@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+  .intro-button{
+    @apply px-6 py-2 border m-3 border-gray-700 rounded-full uppercase text-xs md:tracking-[5px]    text-black 
+    transition-all hover:border-blue-400 hover:text-blue-500
+  }
+  .form-item {
+    @apply outline-none rounded-lg bg-slate-50 border-b text-black 
+  }
+  
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  @apply scrollbar-thin 
 }
 
 @media (prefers-color-scheme: dark) {
