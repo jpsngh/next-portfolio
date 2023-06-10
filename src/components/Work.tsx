@@ -18,7 +18,7 @@ const Work = (props: Props) => {
              year={experience.year}
              inst = {experience.institution}
             
-            > </Card>
+            ></Card>
        })}
         </div>
         
