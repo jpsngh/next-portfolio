@@ -24,7 +24,7 @@ const Projects = (props: Props) => {
     
      <div  className='h-screen snap-center bg-white mx-auto max-w-7xl xl:max-w-8xl z-0  items-center flex flex-col relative  my-5 ' >
 
-    <h3 className='uppercase hidden md:block
+    <h3 className='uppercase  absolute hidden md:block
            tracking-[15px] top-20 text-gray-600 text-2xl z-20'> Projects </h3>
 
            <div  ref={ref}
@@ -32,7 +32,7 @@ const Projects = (props: Props) => {
 
            {ProjectList.map((project) => {
      
-           return   <div key={project.name} className='  p-7 border-gray-400 space-x-5 my-[120px]  w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center h-[40%] my-20 '>
+           return   <div key={project.name} className='  p-7 border-gray-400 space-x-5 my-[120px]  w-screen md:w-fit flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center h-[40%] my-20 '>
          
             <img className=' md:w-[30%] md:h-[30%] w-[30%] h-[30%]  m-5 '  src={project.image} alt=""></img>
             <div className="md:w-full w-[550px]  flex  flex-col items-center p-4">

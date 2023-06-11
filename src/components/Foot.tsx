@@ -18,7 +18,7 @@ function Foot({}: Props) {
    <SocialIcon url="https://twitter.com/thejusticeprime" fgColor='black' bgColor='transparent' /> 
    </div>
    
-   <div className='flex   md:block flex-row items-center p-1 gap-2 text-black' > 
+   <div className='flex   flex-row items-center p-1 gap-2 text-black' > 
        <h4>jpatdesk@gmail.com</h4>
        <h4 className=" hidden md:block">+16479799596 </h4>
 
