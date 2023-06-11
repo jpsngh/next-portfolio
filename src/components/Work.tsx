@@ -6,7 +6,7 @@ type Props = {}
 
 const Work = (props: Props) => {
   return (
-    <div className='h-screen bg-white mx-auto max-w-7xl   items-center flex flex-col  my-5 text-left md:flex-row  justify-center  relative overflow-hidden  '>
+    <div className='h-screen sm:h-fit bg-white mx-auto max-w-7xl   items-center flex flex-col  my-5 text-left md:flex-row  justify-center  relative overflow-hidden  '>
         <div className=' top-24 flex '> 
         <h2 className=' mx-5 my-5  tracking-wider uppercase  md:tracking-[15px] text-gray-500 text-2xl' > Work Experience and Education </h2>
         </div>

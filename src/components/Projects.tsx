@@ -22,7 +22,7 @@ const Projects = (props: Props) => {
   return ( 
     
     
-     <div  className='h-screen snap-center bg-white mx-auto max-w-7xl xl:max-w-8xl z-0  items-center flex flex-col relative  my-5 ' >
+     <div  className='h-screen sm:h-fit snap-center bg-white mx-auto max-w-7xl xl:max-w-8xl z-0  items-center flex flex-col relative  my-5 ' >
 
     <h3 className='uppercase  absolute hidden md:block
            tracking-[15px] top-20 text-gray-600 text-2xl z-20'> Projects </h3>

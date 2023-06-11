@@ -5,9 +5,9 @@ type Props = {}
 const About = (props: Props) => {
   return (
     <div className='flex flex-col  relative h-screen text-center  max-w-7xl 
-    px-10 justify-center mx-auto items-center bg-gray-50 rounded-lg'>
+    px-10 justify-center mx-auto items-center bg-gray-50 rounded-lg sm:h-fit'>
         
-        <h2 className='absolute md:block hidden top-20 uppercase tracking-[15px] text-gray-500 text-2xl' >   About</h2>
+        <h2 className='absolute md:block hidden  top-20 uppercase tracking-[15px] text-gray-500 text-2xl' >   About</h2>
          
         <motion.img className=' rounded border md:h-[350px] md:w-[350px] h-[150px] w-[150px] m-5'
 
