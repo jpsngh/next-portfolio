@@ -20,7 +20,7 @@ function Foot({}: Props) {
    
    <div className='flex   md:block flex-row items-center p-1 gap-2 text-black' > 
        <h4>jpatdesk@gmail.com</h4>
-       <h4 className=" hidden md:flex">+16479799596 </h4>
+       <h4 className=" hidden md:block">+16479799596 </h4>
 
   
         </div>
