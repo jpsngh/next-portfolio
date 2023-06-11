@@ -22,22 +22,23 @@ const Projects = (props: Props) => {
   return ( 
     
     
-     <div  className='h-screen snap-center bg-white mx-auto max-w-7xl xl:max-w-8xl z-0  items-center flex flex-col relative overflow-auto my-5 ' >
+     <div  className='h-screen snap-center bg-white mx-auto max-w-7xl xl:max-w-8xl z-0  items-center flex flex-col relative  my-5 ' >
 
-    <h3 className='absolute  uppercase
+    <h3 className='uppercase hidden md:block
            tracking-[15px] top-20 text-gray-600 text-2xl z-20'> Projects </h3>
 
            <div  ref={ref}
-            className =' absolute w-fit md:w-[650px] flex items-center snap-center  overflow-x-scroll snap-x snap-mandatory z-0 overflow-y-hidden text-black m-5 '> 
+            className =' w-[90%] bg-gray-50 flex items-center space-x-5    snap-x snap-mandatory z-0 p-[20px] overflow-x-scroll text-black m-5 '> 
 
            {ProjectList.map((project) => {
-            return <div key={project.name} className='   border-gray-400 my-[120px]  w-[100%] flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center  h-[80%] my-20 '>
+     
+           return   <div key={project.name} className='  p-7 border-gray-400 space-x-5 my-[120px]  w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center h-[40%] my-20 '>
          
-            <img className=' md:w-[30%] md:h-[30%] w-[10%] h-[10%]  m-5 '  src={project.image} alt=""></img>
+            <img className=' md:w-[30%] md:h-[30%] w-[30%] h-[30%]  m-5 '  src={project.image} alt=""></img>
             <div className="md:w-full w-[550px]  flex  flex-col items-center p-4">
                 <h4 className=" text-2xl"> {project.name} </h4>
                
-                <div className='flex flex-row m-2 text-lg'>
+                <div className='flex flex-row m-2 p-5 text-lg'>
                   
                    {project.tech.map((tech)=>(<div className='flex flex-shrink-3'  key={tech}> <h4 >{tech},</h4></div>))}
                 </div>
@@ -56,9 +57,12 @@ const Projects = (props: Props) => {
     
       </div>
       </div>
+   
+      
 
            })}
           </div>
+          
     
     <div className='  absolute top-[20%] bg-slate-200 w-[800px] my-5 flex-shrink-0 md:mx-[250px] shadow-2xl left-0  '></div>
     

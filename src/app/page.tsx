@@ -12,7 +12,7 @@ import Contact from '@/components/Contact'
 import Foot from '@/components/Foot'
  const Home : NextPage=()=>{
   return (
-    <div className=" bg-slate-900 snap-y  snap-mandatory overflow-scroll scrollbar-thin z=0">
+    <div className=" bg-slate-900 snap-y  snap-mandatory overflow-scroll z=0">
     <Head> <title> JP Portfolio</title></Head>
     <motion.div
     initial={{ y:-500,opacity: 0, scale: 0.5 }}

@@ -7,7 +7,7 @@ function Foot({}: Props) {
     <div className=' flex flex-row items-center p-5 max-w-7xl  justify-evenly mx-auto bg-white w-screen rounded-md'>
         
          
-        <div className='flex flex-row items-center p-1'>
+        <div className='flex   md:flex flex-row items-center p-1'>
    
 
    
@@ -18,9 +18,9 @@ function Foot({}: Props) {
    <SocialIcon url="https://twitter.com/thejusticeprime" fgColor='black' bgColor='transparent' /> 
    </div>
    
-   <div className='flex flex-row items-center p-1 gap-2 text-black' > 
+   <div className='flex   md:block flex-row items-center p-1 gap-2 text-black' > 
        <h4>jpatdesk@gmail.com</h4>
-       <h4>+16479799596 </h4>
+       <h4 className=" hidden md:flex">+16479799596 </h4>
 
   
         </div>
