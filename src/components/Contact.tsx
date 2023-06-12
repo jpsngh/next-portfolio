@@ -13,7 +13,7 @@ const Contact = (props: Props) => {
   const { register, handleSubmit} = useForm<Inputs>();
   const onSubmit :SubmitHandler<Inputs> =data => { window.location.href = `mailto:jpatdesk@gmail.com?subject=${data.subject}&body=  ${data.message} - Thanks ${data.name}`};
   return (
-    <div className="h-screen sm:h-fit bg-white mx-auto max-w-7xl   items-center flex flex-col  my-5 text-left md:flex-row  justify-center  relative overflow-hidden  ">
+    <div className="h-screen  bg-white mx-auto max-w-7xl   items-center flex flex-col  my-5 text-left md:flex-row  justify-center  relative overflow-hidden  ">
       <div className="w-full absolute top-[40%] shadow-2xl bg-slate-800 left-0 h-[500px] skew-y-12"></div>
       <div className=" top-24 flex ">
         <h2 className=" mx-5 my-5 top-24 tracking-wider uppercase  md:tracking-[15px] text-gray-500 text-2xl z-10">
