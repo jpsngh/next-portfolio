@@ -1,75 +1,94 @@
-import React,{useRef} from 'react'
+import React,{useRef, useState} from 'react'
+import Modal from 'antd/es/modal/Modal';
 import { ProjectList } from './ProjectList';
 import { createTextChangeRange } from 'typescript';
 import Link from 'next/link';
 import { scroll } from 'framer-motion';
+
  
 type Props = {}
 
 const Projects = (props: Props) => {
-   const ref:any = useRef(null);
-   
-   
+   const ref:any = useRef({});
+
     const projects = [1,2,3,4];
- const scroll  = (scrollSet:number) => {
-   ref.current.scrollLeft += scrollSet;
-   console.log(ref.current.scrollLeft)
-   console.log(ref.current)
- }
-   
-  
-  
+    const [active, setActive] = useState(false);
+    const [prop,setProp] = useState<any >();
+
+    const handle =(project:any)=>{
+       console.log(project);
+        setProp(project);
+        console.log(prop)
+      return setActive(true)
+
+    }
+
+
   return ( 
     
     
-     <div  className='h-screen sm:h-fit snap-center bg-white mx-auto max-w-7xl xl:max-w-8xl z-0  items-center flex flex-col relative  my-5 ' >
+     <div  className='h-screen   overflow-x-scroll bg-white mx-auto max-w-7xl xl:max-w-8xl z-0 flex flex-col items-center gap-2 relative  my-5 ' >
 
-    <h3 className='uppercase  absolute hidden md:block
-           tracking-[15px] top-20 text-gray-600 text-2xl z-20'> Projects </h3>
-
+    <h3 className='uppercase  md:block my-10
+           m-2 tracking-[15px] top-20 text-gray-600 text-2xl z-20'> Projects </h3>
+                        
+                        <div className='flex flex-row'> 
            <div  ref={ref}
-            className =' w-[90%] bg-gray-50 flex items-center space-x-5    snap-x snap-mandatory z-0 p-[20px] overflow-x-scroll text-black m-5 '> 
+            className ='  h-full bg-white grid grid-cols md:grid-cols-3 items-center    text-black  '> 
 
            {ProjectList.map((project) => {
-     
-           return   <div key={project.name} className='  p-7 border-gray-400 space-x-5 my-[120px]  w-screen md:w-fit flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center h-[40%] my-20 '>
-         
-            <img className=' md:w-[30%] md:h-[30%] w-[30%] h-[30%]  m-5 '  src={project.image} alt=""></img>
-            <div className="md:w-full w-[550px]  flex  flex-col items-center p-4">
-                <h4 className=" text-2xl"> {project.name} </h4>
-               
-                <div className='flex flex-row m-2 p-5 text-lg'>
-                  
-                   {project.tech.map((tech)=>(<div className='flex flex-shrink-3'  key={tech}> <h4 >{tech},</h4></div>))}
-                </div>
-                <p className='w-screen md:w-full p-3'>{project.desc}</p>
-                <div className='flex flex-row gap-3 m-2'> 
-                <Link href={project.deployed}> 
-                <button  className='btn primary border  border-cyan-300 rounded-lg p-3 hover:blur-sm' > Live View </button></Link>
-           <Link href={project.github}> <button className='btn primary border border-cyan-300 rounded-lg p-3 hover:blur-sm ' > Github</button>
-        </Link>
+                 
+              return   <div key={project.name} className='w-[400px] h-[400px] p-3  flex  flex-col items-center  justify-center gap-2 '>
 
-        </div>
-        </div>   
-        <div className='flex justify-between gap-8 w-full'> 
-        <div>   <button className= ' border rounded-sm p-2 hidden md:block' onClick={()=>scroll(-600)}> Prev </button></div>
-       <div>   <button className= ' border rounded-sm p-2 hidden md:block' onClick={()=>scroll(600)}> Next </button></div>
-    
-      </div>
-      </div>
-   
-      
-
+               <div className='  outline-dashed p-5 flex items-center flex-col relative'> 
+                  <h2 className='font-mono text-2xl'> {project.name} </h2>
+                  <img  className="w-20 h-20" src={project.image} alt="image">
+                  </img>
+                  <p> {project.short}</p>
+ 
+                <button className="text-gray-900 m-2 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2" onClick={(e)=>handle(project)} > View </button>
+</div>
+                 </div>
+                
            })}
           </div>
           
-    
-    <div className='  absolute top-[20%] bg-slate-200 w-[800px] my-5 flex-shrink-0 md:mx-[250px] shadow-2xl left-0  '></div>
-    
+<div >
+          {active && <Modal
+           open={active}
+      
+           centered
+           
+           onOk={() => setActive(false)}
+           onCancel={() => setActive(false)}
+           width={1000}
+          > 
+          <div className='flex flex-col items-center justify-center'> 
+              <h1 className="text-2xl">{prop.name}</h1>
+            <img src={prop.image} className='w-[400px] h-[300px] p-5 m-2'></img>
+            <div className='flex flex-row m-2 gap-2'>
+              <h2 className="mx-2 text-l "> Tech Used:</h2> 
+           {prop.tech.map((teach:string)=>{
+            return (
+            
+            <p key={teach} className='font-mono'>{teach}</p>
+            )
+           })}
+           </div>
+            <p className="font-mono p-2 m-2">{prop.desc}</p>
+            <div className='flex flex-row gap-5 m-2'> 
+            <a href={prop.deployed} className="focus:outline-none text-white bg-green-400 hover:bg-green-600 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-500 dark:hover:bg-green-700 dark:focus:ring-green-800"> Live </a>
+            <a href={prop.github} className="focus:outline-none text-white bg-purple-300 hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-500 dark:hover:bg-purple-700 dark:focus:ring-purple-900"> Github </a>
+            </div>
+            </div>
+            
+            
+            </Modal>}
+          </div>
+          </div>
+
         </div>
-  
-    
-    
+
   )
 }
 

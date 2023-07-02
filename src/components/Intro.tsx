@@ -9,8 +9,10 @@ function Intro({}: Props) {
     const [text,count] = useTypewriter({
         words:[
             "Hi , My name is Jaganpreet Singh",
-            "I am in love with React and its related technologies.jsx",
-            "< Full Stack developer />"
+            "I am in love with react and javascript ecosystem",
+            "Learning Dev Ops and Cloud Infrastructure ",
+            "< Full Stack developer />",
+            "Apart from coding, I love Soccer,Philosophy and Nutrition"
 
         ],
         loop: true,

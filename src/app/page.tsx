@@ -10,6 +10,8 @@ import Skills from '../components/Skills'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import Foot from '@/components/Foot'
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import ProjectDetailed from '@/components/ProjectDetailed'
  const Home : NextPage=()=>{
   return (
     <div className=" bg-slate-900 snap-y  snap-mandatory overflow-scroll z=0">
@@ -23,6 +25,7 @@ import Foot from '@/components/Foot'
 <Header></Header>
 
   </motion.div>
+
 <section className='snap-center'> <Intro></Intro></section>
 <section id="about" className='snap-center'> <About></About></section>
 <section id="experience" className='snap-center'> <Work></Work></section>
@@ -30,7 +33,6 @@ import Foot from '@/components/Foot'
 <section id="projects" className='snap-center'> <Projects></Projects></section>
 <section id="contact" className='snap-center'> <Contact></Contact></section> 
 <section id="footer" className='snap-center'> <Foot></Foot></section> 
-
 
     
     </div>

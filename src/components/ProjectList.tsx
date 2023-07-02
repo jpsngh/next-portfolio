@@ -1,12 +1,28 @@
-export const ProjectList = [{
-    name: "POS Mern Application",
+export const ProjectList = [
+    {
+        name: "Google Docs Clone",
+     
+        
+        desc:
+         " A project inspired by the automatic synchronization feature of Google Docs,built using react state hooks and socket.io in the backend.Additionaly,Mongo db has been used to save the progress and react router with params used to keep every document unique and shareable, user can enter the room which contains the document and edit on multiple screens.  " ,
+        image:"https://syncing-documents.vercel.app/gif.gif",
+        tech:["ReactJS","Socket.io","State Hooks","MongoDB Atlas"],
+        short: "Automatic Documents Syncing",
+        github:"https://github.com/jpsngh/syncing-documents",
+        deployed:""
+       },
+      
+    
+    
+    {
+    name: "POS System",
  
     
     desc:
      "Point of Sale (POS) MERN (MongoDB, Express.js, React.js, Node.js) application that allows users to manage their inventory and create transactions. The application fetches food items from a database and allows users to add them to a cart, where they can view and edit the items they have selected,Users can create transactions to complete sales, and the application generates invoices for each transaction. Additionally, users can manage their inventory by editing or deleting food items from the database.         Test Credentials: username :123, password: 123 " ,
     image:"https://jpsingh.netlify.app/static/media/POS1.4229df58149d782d98c5.png",
     tech:["ReactJS","NodeJS","EXpress","MongoDB Atlas"],
-
+    short: "A Full Stack MERN application",
     github:"https://github.com/jpsngh/Mern-POS",
     deployed:"https://lazy-puce-turtle-sock.cyclic.app"
    },
@@ -14,16 +30,17 @@ export const ProjectList = [{
        name: "Personal Diary",
        image:"https://jpsingh.netlify.app/static/media/PD1.33370b5bb2d1630296d1.png",
        desc: "I built a personal diary site using the MERN stack with JWT authentication and CRUD operations. The site allows users to create an account, log in, and create, read, update, and delete diary entries. It also includes features such as password hashing for secure authentication and authorization, validation for form inputs, and error handling.In the future, I plan to add features such as similar tags functionality which lets user search similar thoughts by other users by keeping privacy and the ability to upload images to diary entries. I also plan to continue improving the user interface and making the site more user-friendly    Test Credentials: username :testuser@gmail.com, password: testuser",
-      
+       short: "A Full Stack MERN application",
        tech:["ReactJS","NodeJS","Express","MongoDb",],
        
        github:"https://github.com/jpsngh/personaldiary",
        deployed:"https://real-foal-tiara.cyclic.app "
    },
+   
    {
        name: "Job Portal",
        image:"https://jpsingh.netlify.app/static/media/JP1.23f59c14deb34021ccdc.png",
-       
+       short: "A Full Stack MERN application",
        desc: "Developed a responsive and mobile-friendly job portal using React, following the Google Material Design guidelines for a modern and intuitive user interface. Implemented dynamic features such as job search, job filtering, and job recommendation using React components and state management.Planning to expand the job portal to a full-fledged job search platform, including the ability to add jobs and advanced user profiles.",
       
        tech:["ReactJS","HTML","CSS","Responsive Design",],
@@ -34,7 +51,7 @@ export const ProjectList = [{
        name: "Clan Chat",
        image:"https://jpsingh.netlify.app/static/media/Chat3.9b82749c45a9b1c87aad.png",
        desc: " A chat application using React and Firebase that allows users to join or create rooms and chat in real-time. The app features Google authentication, ensuring user security and privacy. I designed and implemented the user interface and integrated real-time database functionality using Firebase. This project showcases my expertise in React and demonstrates my ability to create dynamic and interactive web applications.",
-      
+       short: "A Full Stack MERN application",
        tech:["ReactJS","Firebase","BootStrap","AntDesign"],
        github:"https://github.com/jpsngh/Clanchat",
        deployed:"https://clanchat.netlify.app"
@@ -43,7 +60,7 @@ export const ProjectList = [{
            name: "TO DO LIST",
            image:"https://jpsingh.netlify.app/static/media/Todo1.cf8df6478204dd04c297.png",
            desc: "Application built in Nodejs using Express and HTML that lets users add notes and delete from database,MongoDb is used for the stoarge solutions.",
-          
+           short: "A Full Stack MERN application",
            tech:["Node Js","Express","HTML","CSS"],
         
            github:"https://github.com/jpsngh/todolist",
@@ -55,7 +72,7 @@ export const ProjectList = [{
            image:"",
           
            desc: "An Amazon like store clone in React Js with the functionality of cart using Context API,make use Of Axios to f3etch data from online API.",
-          
+           short: "A Full Stack MERN application",
            tech:["ReactJS","Axios","HTML","CSS"],
      
            github:"https://github.com/jpsngh/estore",
