@@ -1,5 +1,6 @@
 "use client"
 import type { NextPage } from 'next'
+import ReactGA,{ga} from 'react-ga';
 import Head from 'next/head'
 import { motion } from "framer-motion"
 import Header from '../components/Header'
@@ -10,9 +11,23 @@ import Skills from '../components/Skills'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import Foot from '@/components/Foot'
+import { useEffect } from 'react';
 
 
  const Home : NextPage=()=>{
+
+
+  useEffect (()=>{
+    const TRACKING_ID = "G-X4379F3FYG"
+    ReactGA.initialize(TRACKING_ID);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    ga('set', 'page', window.location.pathname)
+    ga('send', 'pageview');
+
+  
+  },[]);
+
+
   return (
     <div className=" bg-slate-900 snap-y  snap-mandatory overflow-scroll z=0">
     <Head> <title> JP Portfolio</title></Head>
