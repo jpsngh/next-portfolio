@@ -25,7 +25,7 @@ const About = (props: Props) => {
             transition={{duration:1.2}}
             whileInView={{x:0,y:1,opacity:1}}
             viewport={{once:false}}
-            src="https://scontent.fyyz1-2.fna.fbcdn.net/v/t1.6435-9/31138123_1652144704901838_5576495067935277056_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a4a2d7&_nc_ohc=360AFgOfPyYAX_rGIF_&_nc_ht=scontent.fyyz1-2.fna&oh=00_AfBgdGspihjB_Vq26YHsCL7W1wxWrakM6wRBRP-keCAMEw&oe=64A2EAAC" >
+            src="./jpdp.jpg" >
             
             </motion.img>
          
