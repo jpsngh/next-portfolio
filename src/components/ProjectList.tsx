@@ -1,4 +1,21 @@
 export const ProjectList = [
+
+    {
+        name: "Gym Management Website",
+     
+        
+        desc:
+         " A Fully Customizable Website taking advantage of Sanity Cms for the FrontEnd,Clerk is used for authentication,Functional backend with role based access for trainers and admins, editable and interactive profile system for all the users, built using  Next Js with server components." ,
+        image:"./free-bird.png",
+        tech:["NextJs","Sanity","Clerk","MongoDB Atlas"],
+        short: "Gym Website",
+        github:"https://github.com/jpsngh/free-bird",
+        deployed:"https://myathlete.ca"
+       },
+      
+
+
+
     {
         name: "Google Docs Clone",
      
